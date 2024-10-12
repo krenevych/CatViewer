@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CatViewer</string>
+    <string name="check_box_viewer">Check box Viewer</string>
+    <string name="radio_box_viewer">Radio Box Viewer</string>
+    <string name="toggle_button_viewer">Toggle Button Viewer</string>
+    <string name="spinner_viewer">Spinner Viewer</string>
+</resources>
