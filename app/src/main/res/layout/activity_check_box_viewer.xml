@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".CheckBoxViewerActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Check box Viewer"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+    <ImageView
+        android:id="@+id/imageViewCat"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:contentDescription="relaxed cat"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/cat_relaxed" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <CheckBox
+        android:id="@+id/checkBoxRelaxed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relaxed cat" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSitting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sitting cat" />
+
+    <CheckBox
+        android:id="@+id/checkBoxJumping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jumping cat" />
+
+
+</LinearLayout>
