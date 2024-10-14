@@ -8,4 +8,9 @@
     <string name="relaxed_cat">Relaxed cat</string>
     <string name="sitting_cat">Sitting cat</string>
     <string name="jumping_cat">Jumping cat</string>
+    <string-array name="cats">
+        <item>@string/relaxed_cat</item>
+        <item>@string/sitting_cat</item>
+        <item>@string/jumping_cat</item>
+    </string-array>
 </resources>
