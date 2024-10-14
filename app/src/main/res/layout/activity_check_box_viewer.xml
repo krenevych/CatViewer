@@ -6,34 +6,33 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".CheckBoxViewerActivity">
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageViewCat"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:contentDescription="relaxed cat"
+        android:contentDescription="@string/image_cat"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/cat_relaxed" />
 
     <CheckBox
-        android:id="@+id/checkBoxRelaxed"
+        android:id="@+id/btn_relaxed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Relaxed cat" />
+        android:text="@string/relaxed_cat" />
 
     <CheckBox
-        android:id="@+id/checkBoxSitting"
+        android:id="@+id/btn_sitting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sitting cat" />
+        android:text="@string/sitting_cat" />
 
     <CheckBox
-        android:id="@+id/checkBoxJumping"
+        android:id="@+id/btn_jumping"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jumping cat" />
+        android:text="@string/jumping_cat" />
 
 
 </LinearLayout>
