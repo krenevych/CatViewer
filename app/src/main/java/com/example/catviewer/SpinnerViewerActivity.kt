@@ -44,7 +44,7 @@ class SpinnerViewerActivity : AppCompatActivity(), AdapterView.OnItemSelectedLis
     )
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        binding.imageViewCat.setImageResource(catsResources[position])
+        binding.imageCat.setImageResource(catsResources[position])
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {

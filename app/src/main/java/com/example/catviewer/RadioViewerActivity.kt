@@ -36,7 +36,7 @@ class RadioViewerActivity : AppCompatActivity(), CompoundButton.OnCheckedChangeL
             else -> R.drawable.cat_relaxed
         }
 
-        binding.imageViewCat.setImageResource(res)
+        binding.imageCat.setImageResource(res)
 
     }
 }

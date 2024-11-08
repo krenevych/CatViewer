@@ -1,6 +1,6 @@
 package com.example.catviewer
 
-val dataSet: List<ItemCat> = listOf(
+val dataSet = arrayOf(
     ItemCat( "Cat first", R.drawable.cat_first),
     ItemCat( "Cat second", R.drawable.cat_second),
     ItemCat( "Cat third", R.drawable.cat_third),

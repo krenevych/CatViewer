@@ -50,7 +50,7 @@ class CheckBoxViewerActivity : AppCompatActivity(), CompoundButton.OnCheckedChan
             else -> {R.drawable.cat_relaxed}
         }
 
-        binding.imageViewCat.setImageResource(res)
+        binding.imageCat.setImageResource(res)
 
     }
 }

@@ -17,7 +17,7 @@ class RecyclerViewViewerActivity : AppCompatActivity() {
 //    1 Створюємо клас даних ...Item.. для відображення одного елементу списку.
 //    2. Створюємо ViewHolder - обʼєкт, що зображує однин елемент списку (для кожного типу елементів свій)
 //    3. Створюємо адаптер, щоб обʼєднує дані і візуальну частину
-
+//    4. Встановлюємо для нашого RecyclerView адаптер
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -26,7 +26,7 @@ class RecyclerViewViewerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
+        binding.recyclerCat.adapter = CatAdapter(dataSet)
     }
 
 }

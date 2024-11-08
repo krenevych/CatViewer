@@ -21,9 +21,9 @@ class ToggleViewerActivity : AppCompatActivity() {
 
         binding.btnPushCat.setOnCheckedChangeListener { btn, isChecked ->
             if (isChecked){
-                binding.imageViewCat.setImageResource(R.drawable.cat_jumping)
+                binding.imageCat.setImageResource(R.drawable.cat_jumping)
             } else {
-                binding.imageViewCat.setImageResource(R.drawable.cat_relaxed)
+                binding.imageCat.setImageResource(R.drawable.cat_relaxed)
             }
         }
     }
