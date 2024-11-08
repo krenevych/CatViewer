@@ -33,5 +33,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SpinnerViewerActivity::class.java)
             startActivity(intent)
         }
+        viewBinding.btnRecycler.setOnClickListener {
+            val intent = Intent(this, RecyclerViewViewerActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

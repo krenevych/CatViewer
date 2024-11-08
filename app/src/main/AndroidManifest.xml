@@ -22,6 +22,9 @@
             android:name=".RadioViewerActivity"
             android:exported="false" />
         <activity
+            android:name=".RecyclerViewViewerActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckBoxViewerActivity"
             android:exported="false" />
         <activity
