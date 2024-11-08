@@ -1,12 +1,8 @@
 package com.example.catviewer
 
 import android.os.Bundle
-import android.widget.CompoundButton
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.catviewer.databinding.ActivityRadioViewerBinding
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.catviewer.databinding.ActivityRecyclerViewerBinding
 
 class RecyclerViewViewerActivity : AppCompatActivity() {
@@ -14,7 +10,7 @@ class RecyclerViewViewerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecyclerViewerBinding
 
 //    0. Додаємо RecyclerView як View у розмітку
-//    1 Створюємо клас даних ...Item.. для відображення одного елементу списку.
+//    1. Створюємо клас даних ...Item.. для відображення одного елементу списку.
 //    2. Створюємо ViewHolder - обʼєкт, що зображує однин елемент списку (для кожного типу елементів свій)
 //    3. Створюємо адаптер, щоб обʼєднує дані і візуальну частину
 //    4. Встановлюємо для нашого RecyclerView адаптер
@@ -26,6 +22,7 @@ class RecyclerViewViewerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.recyclerCat.layoutManager = LinearLayoutManager(this)
         binding.recyclerCat.adapter = CatAdapter(dataSet)
     }
 
