@@ -13,6 +13,12 @@ class RecyclerViewViewerActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRecyclerViewerBinding
 
+//    0. Додаємо RecyclerView як View у розмітку
+//    1 Створюємо клас даних ...Item.. для відображення одного елементу списку.
+//    2. Створюємо ViewHolder - обʼєкт, що зображує однин елемент списку (для кожного типу елементів свій)
+//    3. Створюємо адаптер, щоб обʼєднує дані і візуальну частину
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         binding = ActivityRecyclerViewerBinding.inflate(layoutInflater)
