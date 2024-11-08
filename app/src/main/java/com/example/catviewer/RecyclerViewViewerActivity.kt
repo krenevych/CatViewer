@@ -9,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.catviewer.databinding.ActivityRadioViewerBinding
 import com.example.catviewer.databinding.ActivityRecyclerViewerBinding
 
-class RecyclerViewViewerActivity : AppCompatActivity(), CompoundButton.OnCheckedChangeListener {
+class RecyclerViewViewerActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRecyclerViewerBinding
 
@@ -20,24 +20,7 @@ class RecyclerViewViewerActivity : AppCompatActivity(), CompoundButton.OnChecked
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.btnRelaxed.setOnCheckedChangeListener(this)
-        binding.btnSitting.setOnCheckedChangeListener(this)
-        binding.btnJumping.setOnCheckedChangeListener(this)
 
     }
 
-    override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
-
-        if (!isChecked) return
-
-        val res = when (buttonView) {
-            binding.btnRelaxed -> R.drawable.cat_relaxed
-            binding.btnSitting -> R.drawable.cat_sitting
-            binding.btnJumping -> R.drawable.cat_jumping
-            else -> R.drawable.cat_relaxed
-        }
-
-        binding.imageViewCat.setImageResource(res)
-
-    }
 }
