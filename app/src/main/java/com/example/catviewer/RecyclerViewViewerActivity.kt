@@ -2,6 +2,7 @@ package com.example.catviewer
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.catviewer.databinding.ActivityRecyclerViewerBinding
 
@@ -23,7 +24,20 @@ class RecyclerViewViewerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.recyclerCat.layoutManager = LinearLayoutManager(this)
-        binding.recyclerCat.adapter = CatAdapter(dataSet)
+//        binding.recyclerCat.layoutManager = GridLayoutManager(this, 3)
+        binding.recyclerCat.adapter = CatAdapter(dataSet).apply {
+//            clickListener = object : CatAdapter.ClickListener {
+//                override fun onClick(position: Int) {
+//                    binding.imageCat.setImageResource(dataSet[position].resource)
+//                }
+//            }
+
+            clickListener = CatAdapter.ClickListener { position: Int ->
+                binding.imageCat.setImageResource(dataSet[position].resource)
+            }
+
+        }
+
     }
 
 }
