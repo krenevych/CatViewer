@@ -8,17 +8,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btnCheckBox"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="wrap_content"
-        android:text="@string/check_box_viewer"
-        app:layout_constraintBottom_toTopOf="@+id/btnRadio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRecycler" />
-
-    <Button
         android:id="@+id/btnRecycler"
         android:layout_width="@dimen/button_width"
         android:layout_height="wrap_content"
@@ -28,6 +17,17 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCheckBox"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="wrap_content"
+        android:text="@string/check_box_viewer"
+        app:layout_constraintBottom_toTopOf="@+id/btnRadio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecycler" />
 
     <Button
         android:id="@+id/btnRadio"
