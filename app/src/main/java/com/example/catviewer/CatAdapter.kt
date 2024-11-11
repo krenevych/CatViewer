@@ -1,12 +1,9 @@
 package com.example.catviewer
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.catviewer.databinding.CatItemBinding
 
 class CatAdapter(private val dataSet: Array<ItemCat>) :
     RecyclerView.Adapter<CatAdapter.ViewHolder>() {
@@ -22,26 +19,24 @@ class CatAdapter(private val dataSet: Array<ItemCat>) :
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder)
      */
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val catName: TextView
-        val catImage: ImageView
-        val catCardView: CardView
-
-        init {
-            // Define click listener for the ViewHolder's View
-            catName = view.findViewById(R.id.nameCat)
-            catImage = view.findViewById(R.id.imageCat)
-            catCardView = view.findViewById(R.id.catCardView)
-        }
-    }
+    class ViewHolder(
+        val binding: CatItemBinding
+    ) : RecyclerView.ViewHolder(binding.root)
 
     // Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.cat_item, viewGroup, false)
+//        val view = LayoutInflater.from(viewGroup.context)
+//            .inflate(R.layout.cat_item, viewGroup, false)
 
-        return ViewHolder(view)
+        // Create binding which contains view.
+        val binding = CatItemBinding.inflate(
+            LayoutInflater.from(viewGroup.context),
+            viewGroup,
+            false
+        )
+
+        return ViewHolder(binding)
     }
 
     // Replace the contents of a view (invoked by the layout manager)
@@ -49,11 +44,10 @@ class CatAdapter(private val dataSet: Array<ItemCat>) :
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.catName.text = dataSet[position].name
-        viewHolder.catImage.setImageResource(dataSet[position].resource)
-        viewHolder.catCardView.setOnClickListener {
+        viewHolder.binding.nameCat.text = dataSet[position].name
+        viewHolder.binding.imageCat.setImageResource(dataSet[position].resource)
+        viewHolder.binding.catCardView.setOnClickListener {
             clickListener?.onClick(position)
-//            clickListener?.invoke(position)
         }
     }
 
